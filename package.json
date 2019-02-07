@@ -1,0 +1,40 @@
+{
+  "name": "enter-name",
+  "version": "1.0.0",
+  "description": "enter description",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha --reporter spec",
+    "cover": "nyc mocha --reporter spec",
+    "format": "prettier --write \"lib/**/*.ts\" \"test/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JosephMart/gulp-mathjax.git"
+  },
+  "keywords": [],
+  "author": "Joseph Martinsen <joseph@martinsen.com> (http://joseph.martinsen.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JosephMart/gulp-mathjax/issues"
+  },
+  "homepage": "https://github.com/JosephMart/gulp-mathjax#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.2",
+    "mocha": "^5.2.0",
+    "nyc": "^13.2.0",
+    "prettier": "^1.16.4",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.3.1"
+  }
+}
