@@ -1,5 +1,8 @@
 # npm-ts-module-template
 
+![](https://img.shields.io/travis/JosephMart/npm-ts-module-template.svg?style=for-the-badge)
+![](https://img.shields.io/coveralls/github/JosephMart/npm-ts-module-template.svg?style=for-the-badge)
+
 Custom TypeScript setup for creating a npm module
 
 ## Installation
@@ -33,6 +36,7 @@ npm run test
 
 ```sh
 npm publish # publish it
+npm version patch # bump a new patch version of the package
 
 # NPM scripts
 prepare # will run both BEFORE the package is packed and published, and on local npm install
